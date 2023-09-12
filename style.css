@@ -1,0 +1,227 @@
+*{
+    margin:0;
+}
+
+.boton{
+    width:50px;
+    height: 50px;
+    margin:1px;
+}
+.boton:hover{
+    transform: translateX(1px) translateY(1px);
+    color:blue;
+    
+}
+
+/* menu */
+#menu{
+    display:flex;
+    flex-direction: row;
+    height: 52px;
+    margin:2px;
+}
+#nuevo{
+    background: url(images/botones/nuevo.png) center/cover;
+    border-radius: 10% 0% 0% 10%;
+}
+#abrir{
+    background: url(images/botones/abrir.png) center/cover;
+}
+#guardar{
+    background: url(images/botones/guardar.png) center/cover;
+    border-radius: 0% 10% 10% 0%;
+}
+.separador{
+    width:10px;
+}
+#deshacer{
+    background: url(images/botones/deshacer.png) center/cover;
+    border-radius: 10% 0% 0% 10%;
+}
+#rehacer{
+    background: url(images/botones/rehacer.png) center/cover;
+    border-radius: 0% 10% 10% 0%;
+}
+
+/* global.tamañoPunto input */
+#rehacer+div+div{  
+border-radius: 10% 10% 10% 10%;
+}
+.misInputs{
+    width:90px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left:1px;
+    margin-top:1px;
+    background-color: rgb(196,195,196);
+}
+.misInputs>label{
+    text-align: center;
+    color:blue
+}
+.misInputs>input{
+    width:86%;
+    margin:auto;
+    text-align: center;
+}
+.misInputs>input::-webkit-inner-spin-button,
+.misInputs>input::-webkit-outer-spin-button {
+    opacity: 1;
+}
+#datosChupete{
+    /* color:rgb(229, 194, 194); */
+    width:200px;
+    background-color: rgb(160,160,160);
+    text-align: center;
+    padding-top: 15px;
+    margin:1px;
+    border-radius: 10% 10% 10% 10%;
+
+}
+
+#colorFondo{
+    background-color: rgba(0,0, 255, 100);
+    display:flex;
+    z-index: 0;
+    border-top: 2px solid rgb(196,195,196);
+    border-bottom: 2px solid rgb(196,195,196);
+    border-left: 2px solid rgb(196,195,196);
+
+    border-radius: 10% 0% 0% 10%;
+    margin-right: -2px;
+}
+#color{
+    background-color:rgba(255,0,0,100);
+    width:25px;
+    height: 25px;
+    margin-top: 35%;
+    margin-left: 35%;
+    z-index: 1;
+    
+}
+
+
+/* //input alphaLapiz */
+#colorFondo+div{ 
+    margin-right: 0px;
+}
+/* //input alphaFondoLapiz */
+#colorFondo+div+div{ 
+    border-radius: 0% 10% 10% 0%;
+    margin-right: 0px;
+}
+
+
+/* barra */
+
+
+#barra{
+    width:50px;
+    margin:2px
+}
+#lapiz{
+    background: url(images/botones/lapiz.png) center/cover;
+    border-radius: 10% 10% 0% 0%;
+
+}
+#goma{
+    background: url(images/botones/goma.png) center/cover;
+}
+#chupete{
+    background: url(images/botones/chupete.png) center/cover;
+    border-radius: 0% 0% 10% 10%;
+
+}
+.horizontal{
+    height: 3px;
+}
+#rectangulo{
+    background: url(images/botones/rectangulo.png) center/cover;
+    border-radius: 10% 10% 0% 0%;
+
+}
+#rectanguloLLeno{
+    background: url(images/botones/rectanguloLLeno.png) center/cover;
+    border-radius: 0% 0% 10% 10%;
+    
+}
+#pintar{
+    background: url(images/botones/pintar.png) center/cover;
+    
+}
+
+
+#filtros{
+    background: url(images/botones/filtro.png) center/cover;
+}
+
+
+#canvas{
+    position:absolute;
+    top:60px;
+    left:60px;
+    border: 1px black solid;
+}
+
+.invisible{
+    display:none;
+}
+
+
+#filtrosDiv{
+    display:flex;
+    background-color: rgb(146, 168, 168);
+    position:fixed;
+    bottom:-40%;
+    z-index: 1;
+    padding: 0.5%;
+    width:100%;
+    overflow-x:auto;
+    animation: haciaAbajo 0s linear forwards;
+}
+@keyframes haciaArriba{
+    0%{bottom:-40%;}
+    80%{bottom:10%;}
+    90%{bottom:-20%;}
+    95%{bottom:-40%;}
+    100%{bottom:0%;}
+}
+@keyframes haciaAbajo{
+    0%{bottom:0%;}
+    100%{bottom:-40%;
+    }
+    
+}
+
+
+#filtrosDiv>div{
+    width:250px;
+    min-width: 150px;
+    height:120px;
+    background-color: azure;
+    margin:0.3%;
+    border-radius: 8%;    
+    z-index: 0;
+}
+
+#filtrosDiv>div>canvas{
+    width:94%;
+    height:75%;
+    margin:2%;
+    border-radius: 10%;
+    border:2px solid red;
+    z-index: 6;
+}
+
+#filtrosDiv>div>h5{
+    color:red;
+    text-align: center;
+}
+
+#cerrar{
+    width:30px;
+    height: 30px;
+    margin-right:10px;
+    margin-top:10px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miPaint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="menu">
+        <div class="boton btnClick" id="nuevo"></div>
+        <div class="boton btnClick" id="abrir"></div>
+        <div class="boton btnClick" id="guardar"></div>
+        <div class="separador"></div>
+        <div class="boton btnClick" id="deshacer"></div>
+        <div class="boton btnClick" id="rehacer"></div>
+        <div class="separador"></div>
+        <div class="misInputs">
+            <label for="punto">Punto Lapiz</label>
+            <input type="number" name="punto" id="punto" value="5" max="40" min="1">
+        </div>
+        <div class="separador"></div>
+
+        <h5 id="datosChupete"></h5>
+
+        <div class="boton btnClick" id="colorFondo">
+            <div class="boton btnClick" id="color"></div>
+        </div>
+        <div class="misInputs">
+            <label for="alphaLapiz">Alpha Lapiz</label>
+            <input type="number" name="alphaLapiz" id="alphaLapiz" value="100" max="255" min="0">
+        </div>
+        <div class="misInputs">
+            <label for="alphaFondo">Alpha Fondo</label>
+            <input type="number" name="alphaFonfo" id="alphaFondo" value="100" max="255" min="0">
+        </div>
+    </div>
+
+    <div id="barra">
+        <div class="horizontal"></div>
+        <div class="boton btnModo" id="lapiz"></div>
+        <div class="boton btnModo" id="goma"></div>
+        <div class="boton btnModo" id="chupete"></div>
+        <div class="horizontal"></div>
+        <div class="boton btnModo" id="rectangulo"></div>
+        <div class="boton btnModo" id="rectanguloLLeno"></div>
+        <div class="horizontal"></div>
+        <div class="boton btnClick" id="filtros"></div>
+    </div>
+
+
+
+    <!-- filtros -->
+    <div id="filtrosDiv">
+        <div>
+            <canvas id="deteccion" class="boton btnClickFiltro"></canvas>
+            <h5>Deteccion</h5>
+        </div>
+        <div>
+            <canvas id="gris" style="filter:grayscale()" class="boton btnClickFiltro"></canvas>
+            <h5>Gris</h5>
+        </div>
+        <div>
+            <canvas id="binarizacion" class="boton btnClickFiltro"></canvas>
+            <h5>Binarizacion</h5>
+        </div>
+        <div>
+            <canvas id="blur" style="filter: blur(3px)" class="boton btnClickFiltro"></canvas>
+            <h5>Blur</h5>
+        </div>
+        <div>
+            <canvas id="negativo" style="filter:invert()" class="boton btnClickFiltro"></canvas>
+            <h5>Negativo</h5>
+        </div>
+        <div>
+            <canvas id="brillo" style="filter:brightness(90)" class="boton btnClickFiltro"></canvas>
+            <h5>Brillo</h5>
+        </div>
+        <div>
+            <canvas id="saturación" style="filter:saturate(30%)" class="boton btnClickFiltro"></canvas>
+            <h5>Saturacion</h5>
+        </div>
+        <div>
+            <canvas id="sepia" style="filter:sepia()" class="boton btnClickFiltro"></canvas>
+            <h5>Sepia</h5>
+        </div>
+        <div>
+            <canvas id="original" class="boton"></canvas>
+            <h5>Original</h5>
+        </div>
+        <img id="cerrar" src="images/botones/cerrar.png" class="boton btnClick" alt="">
+    </div>
+    <!-- fin filtros -->
+
+    <canvas id="canvas"></canvas>
+
+    <input type="color" class="invisible" id="paleta" value="#ff0000">
+    <input type="color" class="invisible" id="paletaFondo" value="#0000ff">
+    <input type="file" class="invisible" name="" id="file" accept="image/*">
+    <a id="guardador" class="invisible" target="_blank">guardador</a>
+</body>
+
+<script src="js/menu.js"></script>
+<script src="js/filtros.js"></script>
+<script src="js/barraDeHerramientas.js"></script>
+<script src="js/main.js"></script>
+
+</html>
